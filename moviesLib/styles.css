@@ -1,0 +1,123 @@
+.moviesQ{
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    background-color: wheat;
+    top: 70%;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+.pictureLoaded{
+    height: 90%;
+    width: 80%;
+    margin-left: 40px;
+}
+
+.right {
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 80%;
+    top:27%;
+
+}
+
+.left {
+    position: absolute;
+    transform: rotate(-225deg);
+    left: 17%;
+    top:27%;
+
+}
+
+.mobileRight {
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 80%;
+    top:40%;
+    z-index: 100;
+    display: none;
+
+}
+
+.mobileLeft {
+    position: absolute;
+    transform: rotate(-225deg);
+    left: 10%;
+    top:40%;
+    z-index: 100;
+    display: none;
+
+}
+.expressionData1{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border: solid;
+    top:15%;
+    margin-left: 100px;
+    display: inline-block;
+    left: 25%;
+}
+
+.movie1{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border: solid;
+    top:15%;
+    margin-left: 100px;
+    display: inline-block;
+    left: 25%;
+}
+
+.moviesDetails{
+    position: absolute;
+    height: 500px;
+    width: 600px;
+    background-color: wheat;
+    left: 35%;
+    top: 5%;
+
+
+}
+
+.moviePic{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    left: 10%;
+    background-color: wheat;
+
+}
+
+.movieInfo{
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    background-color: olivedrab;
+    margin-top: 500px;
+
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: lightblue;
+    }
+    .moviesQ{
+        display: none;
+    }
+    .mobileRight{
+        display: inline;
+    }
+    .mobileLeft {
+        display: inline;
+    }
+}

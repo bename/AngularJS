@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="validationFormApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controller/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="../inputStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body  ng-controller="mainController">
+    <p class="mainTitle">Welcome! this form combine several validation types, Enjoy!</p>
+    <div class="brief">
+        <p class="firstNameTitle">First name - validate while typing</p>
+        <p class="lastNameTitle">Last name - validate while out of focus</p>
+        <p class="emailTitle">Email - validate while out of focus</p>
+        <p class="passTitle">Password - validate on button click</p>
+    </div>
+
+
+    <form name="validationForm" ng-show="!page2">
+        <div class="container">
+            <table class="dataTable">
+                <tr align="left">
+                    <th > First name</th>
+                    <th > Last name</th>
+                    <th > Email</th>
+                </tr>
+                <tr ng-repeat="userData in tableData">
+                    <td ng-repeat="detail in userData"> {{detail}}</td>
+                </tr>
+            </table>
+
+            <button class="addToTable" ng-click="addDataToTable()">Add data
+                <div class="addToTableArrow"></div>
+            </button>
+
+
+            <div class="inputWrap">
+            <input id="first" class="inputField" placeholder="First name" name="firstName" ng-model="firstName" />
+                <img class="errorImg" ng-show="firstNameError" src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_1280.png"/>
+                <div class="validationTooltip" ng-show="firstNameError">Please enter a valid name
+                    <div class="validationTooltipArrow"></div>
+                </div>
+            </div>
+            <br>
+            <div class="inputWrap">
+            <input class="inputField" id="last" value="" placeholder="Last name" ng-blur="validateField($event.target)" />
+                <img class="errorImg" ng-show="lastNameError" src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_1280.png"/>
+                <div class="validationTooltip" ng-show="lastNameError">Please enter a valid name
+                    <div class="validationTooltipArrow"></div>
+                </div>
+            </div>
+            <br>
+            <div class="inputWrap">
+                <input class="inputField" id="email" placeholder="Email" ng-blur=validateField($event.target) />
+                <img class="errorImg" ng-show="emailError" src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_1280.png"/>
+                <div class="validationTooltip" ng-show="emailError">Please enter a valid email
+                    <div class="validationTooltipArrow"></div>
+                </div>
+
+            </div>
+            <br>
+            <div class="inputWrap">
+                <input class="inputField" id="password" placeholder="Password" ng-blur=validateField() />
+                <img class="errorImg" ng-show="passError" src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_1280.png"/>
+                <div class="validationTooltip" ng-show="passError">You must enter a password
+                    <div class="validationTooltipArrow"></div>
+                </div>
+
+            </div>
+            <br>
+            <div class="buttonLinkComp">
+            <button id="submit" class="loginButton" ng-click="changePage($event.target)" ng-disabled="validationForm.$invalid">Join</button>
+            </div>
+        </div>
+    </form>
+    <form name="welcomeForm" ng-show="page2">
+        <div class="container2">
+            <h1>You have registered successfully</h1>
+            <button ng-click="changePage()"></button>
+        </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>

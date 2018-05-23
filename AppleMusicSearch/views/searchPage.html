@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="musicSearchApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+    <script src="../app.js"></script>
+    <link rel="stylesheet" type="text/css" href="../stylings/searchPage.css">
+    <script src="../controllers/musicSearchController.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+    <script src="../services/musicSearchService.js"></script>
+
+</head>
+<body>
+    <div class="containers" ng-controller="mainController">
+        <div class="containerSearch" >
+            <p class="searchTitle">Please enter a song name to search Apple music: </p>
+            <input class="searchField" id="inputVal" placeholder="Search">
+            <button  class="searchButton" ng-click="searchSongs()">Search songs</button>
+
+            <div class="searchResults">
+                <ul id="simpleList">
+                    <li ng-repeat="song in nextSearches | limitTo:10" >{{song}}</li>
+                </ul>
+
+            </div>
+            <button class="nextButton" ng-click="showNextSongs()">Next songs</button>
+        </div>
+
+
+            <div class="containerRecentSearches">
+                <p class="containerRecentSearchesTitle">Recent searches: </p>
+                <ul id="searchHistory">
+                    <li ng-repeat="recent in recentSearches">{{recent}} <br> </li>
+
+                </ul>
+
+            </div>
+
+            <div class="containerResult">
+
+            </div>
+
+
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+.containers{
+    position: absolute;
+    height: 89%;
+    width: 67%;
+}
+
+.containerSearch{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+    background: lightskyblue;
+    border: inset black 1px;
+}
+.searchTitle{
+    margin: 30px 0 0 35px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.searchField{
+    position: relative;
+    height: 20px;
+    width: 40%;
+    margin: 30px 0 0 32px;
+    border: inset black 2px;
+    text-indent: 10px;
+    color: black;
+    font-size: 15px;
+
+ }
+.startSearch{
+    font-size: 17px;
+    margin-left: 5px;
+    text-decoration: none;
+
+}
+.searchResults{
+    position: relative;
+    height: 60%;
+    width: 80%;
+    margin: 35px 0 0 10px;
+    font-size: 16px;
+}
+
+.searchButton{
+    height: 20px;
+    margin-left: 10px;
+}
+
+.containerResult{
+    position: absolute;
+    height: 70%;
+    width: 37%;
+    left: 61%;
+    background: lightskyblue;
+    border: inset black 1px;
+    margin-left: 2px;
+    top: 0;
+}
+
+.containerRecentSearches{
+    position: absolute;
+    height: 26%;
+    width: 60%;
+    top: 71%;
+    background: lightskyblue;
+    border: inset black 1px;
+
+}
+.nextButton{
+    margin: 20px 0 0 35px;
+    position: relative;
+
+}
+.containerRecentSearchesTitle{
+    margin-left: 10px;
+}

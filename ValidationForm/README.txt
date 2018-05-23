@@ -1,0 +1,1 @@
+This is a validation form SPA, all of the input fields are validated in a different way using Regex.

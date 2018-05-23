@@ -1,0 +1,1 @@
+var validationForm = angular.module('validationFormApp', []);

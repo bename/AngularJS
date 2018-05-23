@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="displayTasksApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controllers/mainController.js"></script>
+    <link rel="stylesheet" type="text/css" href="../inputStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body  ng-controller="mainController">
+
+
+
+    <p class="countryParserTitle"><u><b>List of cities by countries: </b></u></p>
+
+    <div class="dataContainer">
+        <ul id="simpleList" ng-repeat="(country, listOfCities) in countries"><u><b>{{country}}</b></u>
+            <li ng-repeat="city in listOfCities">{{city}}</li>
+        </ul>
+
+    </div>
+
+
+
+
+</body>
+</html>

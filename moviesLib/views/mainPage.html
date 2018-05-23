@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieLibApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controllers/movieSearchController.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body  ng-controller="mainController">
+    <div class="container">
+
+        <div class="moviesDetails">
+
+            <i class="mobileRight" ng-click="nextRight({mobile: true})"></i>
+            <i class="mobileLeft" ng-click="nextLeft({mobile: true})"></i>
+
+            <div class="moviePic">
+                <img class="pictureLoaded" ng-src={{pictureToShow}} />
+            </div>
+            <div class="movieInfo">
+                <p>{{brifToShow}}</p>
+            </div>
+        </div>
+
+        <div class="moviesQ">
+
+            <i class="right" ng-click="nextRight()"></i>
+            <i class="left" ng-click="nextLeft()"></i>
+            <div class="movie1" ng-repeat="movie in moviesToShow | limitTo:4" ng-click="showMovie({movie})">{{movie.name}}
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

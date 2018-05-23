@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('./fonts/montserrat/Montserrat-Bold.ttf');
+}
+
+
+body {
+  background: #f9b41d;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  position: relative;
+  width: 1200px;
+  height: 500px;
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+.mainTitle{
+  font-family: Montserrat-Bold;
+  position: relative;
+  top: 5%;
+  font-size: 22px;
+  left: 10%;
+}
+
+.taskContainer{
+  position: absolute;
+  padding: 5px 0 0 15px;
+  width: 343px;
+  height: 200px;
+  background: #63e89e;
+  left: 10%;
+  border-radius: 10px;
+  top: 25%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+i {
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.right {
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45%;
+  top:40%;
+
+}
+
+.left {
+  position: absolute;
+  transform: rotate(-225deg);
+  top: 40%;
+}
+
+
+.loadC{
+  width: 30px;
+  height: 30px;
+
+}
+
+.dataContainer{
+  position: absolute;
+  top: 15%;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid;
+  left: 10%;
+  padding-top: 25px;
+}
+
+.countryParserTitle{
+  font-family: Montserrat-Bold;
+  position: relative;
+  top: 15%;
+  font-size: 22px;
+  left: 8.5%;
+}

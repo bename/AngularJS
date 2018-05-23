@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="displayTasksApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controllers/mainController.js"></script>
+    <link rel="stylesheet" type="text/css" href="../inputStyles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body  ng-controller="mainController">
+
+
+    <div class="container">
+        <p class="mainTitle">Display the tasks: </p>
+
+
+        <div class="taskContainer">
+
+            <div class="taskInfo">
+                <p> <b>Name:</b> {{taskN}}</p>
+                <p> <b>Type:</b> {{taskT}}</p>
+                <p> <b>Description:</b> <br>  <br>  {{taskD}}</p>
+            </div>
+
+
+        </div>
+        <i class="right" ng-click="nextRight()"></i>
+        <i class="left" ng-click="nextLeft()"></i>
+
+
+    </div>
+
+
+
+</body>
+</html>

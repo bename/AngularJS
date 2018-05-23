@@ -1,0 +1,1 @@
+var musicSearch = angular.module('musicSearchApp', []);
