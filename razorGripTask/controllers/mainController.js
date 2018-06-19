@@ -1,9 +1,7 @@
 tasksDisplay.controller('mainController', ['$scope', '$timeout', '$sce', '$http', function ($scope, $timeout, $sce, $http) {
 
     $scope.tasksList = [];
-    $scope.taskD ="";
-    $scope.taskN ="";
-    $scope.taskT ="";
+    $scope.taskDetails = [taskName="",taskType="",taskDes=""];
     $scope.index =0;
     $scope.countries = {} ;
 
@@ -48,9 +46,9 @@ tasksDisplay.controller('mainController', ['$scope', '$timeout', '$sce', '$http'
     */
 
     $scope.loadTask = function (index) {
-        $scope.taskN = $scope.tasksList[index].taskName;
-        $scope.taskT = $scope.tasksList[index].taskType;
-        $scope.taskD = $scope.tasksList[index].description;
+        $scope.taskDetails[0] = $scope.tasksList[index].taskName;
+        $scope.taskDetails[1] = $scope.tasksList[index].taskType;
+        $scope.taskDetails[2] = $scope.tasksList[index].description;
     };
 
     /*

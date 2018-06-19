@@ -11,29 +11,17 @@
 
 </head>
 <body  ng-controller="mainController">
-
-
     <div class="container">
         <p class="mainTitle">Display the tasks: </p>
-
-
         <div class="taskContainer">
-
             <div class="taskInfo">
-                <p> <b>Name:</b> {{taskN}}</p>
-                <p> <b>Type:</b> {{taskT}}</p>
-                <p> <b>Description:</b> <br>  <br>  {{taskD}}</p>
+                <p> <b>Name:</b> {{taskDetails[0]}}</p>
+                <p> <b>Type:</b> {{taskDetails[1]}}</p>
+                <p> <b>Description:</b> <br>  <br>  {{taskDetails[2]}}</p>
             </div>
-
-
         </div>
         <i class="right" ng-click="nextRight()"></i>
         <i class="left" ng-click="nextLeft()"></i>
-
-
     </div>
-
-
-
 </body>
 </html>
